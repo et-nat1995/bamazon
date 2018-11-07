@@ -60,25 +60,53 @@ function addItem() {
             name: 'product_name',
             message: 'Name of product:',
             type: 'input',
-            validate: validateString(ans)
+            validate: ans =>{
+                if (isNaN(ans)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
         },
         {
             name: 'department_name',
             message: 'Department:',
             type: 'input',
-            validate: validateString(ans)
+            validate: ans =>{
+                if (isNaN(ans)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
         },
         {
             name: 'price',
             message: 'Price:',
             type: 'input',
-            validate: validateNumber(ans)
+            validate: ans =>{
+                if (isNaN(ans)) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
         },
         {
             name: 'stock_quantity',
             message: 'Stock Quantity:',
             type: 'input',
-            validate: validateNumber(ans)
+            validate: ans =>{
+                if (isNaN(ans)) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
         }
     ]).then(ans => {
 
@@ -118,7 +146,7 @@ function addToInvent() {
         var amount;
         connection.query("SELECT * FROM products WHERE item_id = ?", [ans.itemId], (err, data) => {
 
-            amount = data[0].stock_quantity + ans.stock;
+            amount = parseInt(data[0].stock_quantity) + parseInt(ans.stock);
 
             connection.query("UPDATE products set stock_quantity = ? where item_id = ?",[amount, ans.itemId] , (err, data) => {
                 if (err) throw err;

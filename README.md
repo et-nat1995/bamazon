@@ -48,4 +48,28 @@ Item ID  Item Name    Cost  Quantity  Total Cost
 -------  -----------  ----  --------  ----------
 1        MacBook Pro  2400  2         4800
 ```
+
+6. Live Example:
+![live2](live2.gif)
 # bamazonManager.js
+
+What this CLI is desgined to do:
+
+This CLI App gives a manager access to the data by adding new items, adding stock to items by specific ID and view low inventory.
+
+1. To start the App:
+```
+node bamazonManager.js
+```
+
+2. Promted with:
+```
+? What would you like to do?
+  1) View whats for sale.
+  2) View low inventory
+  3) Add to Inventory
+  4) Add new item.
+  Answer:
+```
+3. Live Example of Each Option:
+![liveExample](liveExample.gif)
