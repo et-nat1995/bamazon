@@ -4,7 +4,7 @@
 ```
 npm install
 ```
-2. Open your MySQL work environment and run the .mysql file in this project to create and populate a database.
+2. Open your MySQL work environment and run the querys in the .sql file in this project to create and populate a database.
 3. Modify the .js files if you use a password and user name for your MySQL.
 ```javascript
 var connection = mysql.createConnection({
