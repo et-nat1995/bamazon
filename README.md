@@ -50,7 +50,7 @@ Item ID  Item Name    Cost  Quantity  Total Cost
 ```
 
 6. Live Example:
-![live2](live2.gif)
+![live2](assets/live2.gif)
 # bamazonManager.js
 
 What this CLI is desgined to do:
@@ -72,4 +72,4 @@ node bamazonManager.js
   Answer:
 ```
 3. Live Example of Each Option:
-![liveExample](liveExample.gif)
+![liveExample](assets/liveExample.gif)
